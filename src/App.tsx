@@ -1,10 +1,11 @@
 import './index.css';
+import Navbar from './components/Navbar/navbar';
 
 export default function App() {
 
   return (
     <div className="App">
-      <h1 className='text-2xl text-bold text-pink-950'>Tradenest</h1>
+      <Navbar />
     </div>
   )
 }
