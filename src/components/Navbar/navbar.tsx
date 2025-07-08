@@ -1,9 +1,11 @@
 import '../../index.css';
-import { useState, Suspense } from 'react';
+import { useState, Suspense, lazy } from 'react';
 import { Link } from 'react-router-dom';
 import navbar_toggler from '../../assets/Navbar/navbar-toggler.png';
 import logo_white from '../../assets/Navbar/logo-white.png';
 import profile from '../../assets/Navbar/profile.png';
+
+const Button = lazy(() => import('../Button/button'));
 
 export default function Navbar() {
   const [isToggled, setIsToggled] = useState(false);
@@ -44,7 +46,7 @@ export default function Navbar() {
           <div className="user-actions hidden md:flex items-center space-x-4">
             <img src={profile} alt="profile" className="h-8 w-8 rounded-full" />
             <Link to="/login">
-              {/* <Button text="Login" /> */}
+              <Button text="Login" />
             </Link>
           </div>
         </div>
