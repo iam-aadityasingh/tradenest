@@ -1,13 +1,21 @@
 @import "tailwindcss";
 
-.nav-link {
-    @apply text-[1.1rem] text-black/70 hover:text-black font-serif;
+.serif {
+    @apply font-serif;
 }
 
-.side-link{
-    @apply hover:bg-gray-500 m-0 border-t-2 block font-serif;
+.nav-link {
+    @apply text-[1.1rem] text-black/70 hover:text-black;
+}
+
+.side-link {
+    @apply hover:bg-gray-500 m-0 border-t-2 block;
 }
 
 .side-link-text {
     @apply h-full w-full p-4 px-6 inline-block transition duration-150 hover:translate-x-4;
+}
+
+.btn {
+    @apply bg-gray-500 text-white px-5 py-2 rounded-md hover:bg-gray-600 transition duration-150;
 }

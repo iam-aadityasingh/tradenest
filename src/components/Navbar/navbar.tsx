@@ -1,9 +1,11 @@
 import '../../index.css';
-import { useState, Suspense } from 'react';
+import { useState, Suspense, lazy } from 'react';
 import { Link } from 'react-router-dom';
 import navbar_toggler from '../../assets/Navbar/navbar-toggler.png';
 import logo_white from '../../assets/Navbar/logo-white.png';
 import profile from '../../assets/Navbar/profile.png';
+
+const Button = lazy(() => import('../Button/button'));
 
 export default function Navbar() {
   const [isToggled, setIsToggled] = useState(false);
@@ -20,9 +22,9 @@ export default function Navbar() {
             <img src={logo_white} alt="logo" className="h-12 w-12" />
           </div>
           <div className="links hidden md:flex space-x-8">
-            <Link to="/" className="nav-link">Home</Link>
-            <Link to="/about" className="nav-link">About</Link>
-            <Link to="/contact" className="nav-link">Contact</Link>
+            <Link to="/" className="nav-link serif">Home</Link>
+            <Link to="/about" className="nav-link serif">About</Link>
+            <Link to="/contact" className="nav-link serif">Contact</Link>
           </div>
           <div className="navbar_toggler md:hidden">
             <input
@@ -44,7 +46,7 @@ export default function Navbar() {
           <div className="user-actions hidden md:flex items-center space-x-4">
             <img src={profile} alt="profile" className="h-8 w-8 rounded-full" />
             <Link to="/login">
-              {/* <Button text="Login" /> */}
+              <Button text="Login" />
             </Link>
           </div>
         </div>
@@ -55,10 +57,10 @@ export default function Navbar() {
           ${isToggled ? 'left-0' : '-left-[250px]'}`}
           style={{ height: 'calc(100vh - 56px)' }}
         >
-          <Link to="/" className="side-link"><span className='side-link-text'>Home</span></Link>
-          <Link to="/about" className="side-link"><span className='side-link-text'>About</span></Link>
-          <Link to="/contact" className="side-link"><span className='side-link-text'>Contact</span></Link>
-          <Link to="/login" className="side-link border-b-2"><span className='side-link-text'>Login</span></Link>
+          <Link to="/" className="side-link serif"><span className='side-link-text'>Home</span></Link>
+          <Link to="/about" className="side-link serif"><span className='side-link-text'>About</span></Link>
+          <Link to="/contact" className="side-link serif"><span className='side-link-text'>Contact</span></Link>
+          <Link to="/login" className="side-link serif border-b-2"><span className='side-link-text'>Login</span></Link>
         </div>
       </Suspense>
     </div>
