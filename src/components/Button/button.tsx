@@ -7,7 +7,7 @@ interface ButtonProps {
 export default function button(props: ButtonProps) {
   return (
     <div>
-        <button className='btn'>{props.text}</button>
+        <button className='btn serif'>{props.text}</button>
     </div>
   )
 }

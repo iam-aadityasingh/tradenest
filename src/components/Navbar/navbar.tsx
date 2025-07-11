@@ -22,9 +22,9 @@ export default function Navbar() {
             <img src={logo_white} alt="logo" className="h-12 w-12" />
           </div>
           <div className="links hidden md:flex space-x-8">
-            <Link to="/" className="nav-link">Home</Link>
-            <Link to="/about" className="nav-link">About</Link>
-            <Link to="/contact" className="nav-link">Contact</Link>
+            <Link to="/" className="nav-link serif">Home</Link>
+            <Link to="/about" className="nav-link serif">About</Link>
+            <Link to="/contact" className="nav-link serif">Contact</Link>
           </div>
           <div className="navbar_toggler md:hidden">
             <input
@@ -57,10 +57,10 @@ export default function Navbar() {
           ${isToggled ? 'left-0' : '-left-[250px]'}`}
           style={{ height: 'calc(100vh - 56px)' }}
         >
-          <Link to="/" className="side-link"><span className='side-link-text'>Home</span></Link>
-          <Link to="/about" className="side-link"><span className='side-link-text'>About</span></Link>
-          <Link to="/contact" className="side-link"><span className='side-link-text'>Contact</span></Link>
-          <Link to="/login" className="side-link border-b-2"><span className='side-link-text'>Login</span></Link>
+          <Link to="/" className="side-link serif"><span className='side-link-text'>Home</span></Link>
+          <Link to="/about" className="side-link serif"><span className='side-link-text'>About</span></Link>
+          <Link to="/contact" className="side-link serif"><span className='side-link-text'>Contact</span></Link>
+          <Link to="/login" className="side-link serif border-b-2"><span className='side-link-text'>Login</span></Link>
         </div>
       </Suspense>
     </div>
