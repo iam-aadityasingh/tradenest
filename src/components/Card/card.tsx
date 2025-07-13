@@ -1,6 +1,6 @@
 import content_writer from '../../assets/Card/content-writer.png';
-import like from '../../assets/Card/card-like.png';
-import info from '../../assets/Card/card-info.png';
+import like from '../../assets/Card/card-like-dark.svg';
+import info from '../../assets/Card/card-info-dark.svg';
 import { Suspense } from 'react';
 
 const handleClick = () => {

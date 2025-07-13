@@ -1,9 +1,9 @@
 import '../../index.css';
 import { useState, Suspense, lazy } from 'react';
 import { Link } from 'react-router-dom';
-import navbar_toggler from '../../assets/Navbar/navbar-toggler.png';
+import navbar_toggler from '../../assets/Navbar/navbar-toggler-dark.svg';
 import logo_white from '../../assets/Navbar/logo-white.png';
-import profile from '../../assets/Navbar/profile.png';
+import profile from '../../assets/Navbar/profile-dark.svg';
 
 const Button = lazy(() => import('../Button/button'));
 
