@@ -1,19 +1,17 @@
-import { Suspense } from "react";
-import searchicon from '../../assets/Searchbar/search-icon-dark.svg';
+import { Suspense} from 'react'
+import search_icon from "../../assets/Searchbar/search-icon-dark.svg";
 
-const searchbar = () => {
+export default function searchbar() {
   return (
     <div>
-      <Suspense fallback={<div>Loading Searchbar...</div>}>
-          <div className="searchbar-container w-[30vw] md:w-[50vw] lg:w-[90vw] h-16 bg-white rounded-full flex items-center border-2 border-black mx-auto">
-            <input placeholder="Search..." type="text" className="search-input" />
-            <button className="search-button h-9 w-9 ">
-                <img src={searchicon} className="hover:rotate-45 delay-150" alt="search_icon" />
-            </button>
-          </div>
-      </Suspense>
+        <Suspense fallback={<div>Loading Searchbar...</div>}>
+            <div className="searchbar-container flex items-center justify-center w-full h-20">
+              <input id="search-text" type="text" placeholder="What are you looking for?" className="w-[85vw] h-14 border-2 border-gray-500 hover:border-black rounded-4xl pl-6 "/>
+              <button className="search-button" type='submit'>
+                  <img src={search_icon} alt="search_icon" className='h-14 w-14'/>
+              </button>
+            </div>
+        </Suspense>
     </div>
-  );
-};
-
-export default searchbar;
+  )
+}
