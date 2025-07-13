@@ -5,17 +5,17 @@
 }
 
 .nav-link {
-    @apply text-[1.1rem] text-black/70 hover:text-black;
+    @apply text-[1.1rem] text-[#9C1DE7] hover:text-[#581B98] transition duration-250;
 }
 
 .side-link {
-    @apply hover:bg-gray-500 m-0 border-t-2 block;
+    @apply m-0 border-t-2 block border-black;
 }
 
 .side-link-text {
-    @apply h-full w-full p-4 px-6 inline-block transition duration-150 hover:translate-x-4;
+    @apply h-full w-full p-4 px-6 inline-block hover:translate-x-4 transition duration-250;
 }
 
 .btn {
-    @apply bg-gray-500 text-white px-5 py-2 rounded-md hover:bg-gray-600 transition duration-150;
+    @apply bg-black text-white px-5 py-2 rounded-md hover:bg-[#F3558E] transition duration-250;
 }
