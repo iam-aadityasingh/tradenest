@@ -23,13 +23,13 @@ export default function Dashboard() {
       <Suspense fallback={<div>Loading Dashboard...</div>}>
         <div className="p-4 w-full max-w-[95vw] min-h-[75vh] mx-auto">
           {/* Image Slider */}
-          <div className="w-full rounded-xl overflow-hidden shadow-2xl mb-16 relative">
+          <div className="w-full rounded-xl overflow-hidden shadow-2xl mb-16 relative hover:translate-y-5 transition-transform duration-500 ease-in-out">
             <img
               src={sliderImages[current]}
               alt={`Slide ${current + 1}`}
               className="w-full h-[60vh] object-cover transition-all duration-1000 ease-in-out"
             />
-            <div className="absolute inset-y-1/2 left-4 text-white text-4xl font-bold drop-shadow-lg">
+            <div className="absolute inset-y-3/4 left-4 text-white text-4xl font-bold drop-shadow-lg">
               <span>🌈 Got something to trade for ?</span>
             </div>
           </div>
@@ -39,8 +39,17 @@ export default function Dashboard() {
             <Searchbar />
           </div>
 
-          {/* Product Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div
+            className="
+              grid 
+              gap-6 
+              md:grid-cols-2 
+              lg:grid-cols-3 
+              xl:grid-cols-4 
+              2xl:grid-cols-5
+              justify-items-center
+            "
+          >
             {Array.from({ length: 6 }).map((_, index) => (
               <Card key={index} />
             ))}
