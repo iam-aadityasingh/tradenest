@@ -1,6 +1,7 @@
 import './index.css';
 import Navbar from './components/Navbar/navbar';
 import Dashboard from './components/Dashboard/dashboard';
+import Footer from '../src/components/Footer/footer';
 
 export default function App() {
 
@@ -8,6 +9,7 @@ export default function App() {
     <div className="App">
       <Navbar />
       <Dashboard />
+      <Footer />
     </div>
   )
 }
