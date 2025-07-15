@@ -5,7 +5,7 @@
 }
 
 .nav-link {
-    @apply text-[1.1rem] text-[#9C1DE7] hover:text-[#581B98] transition duration-250;
+    @apply text-[1.1rem] text-[#0C0950] hover:text-[#F3F8FF] transition duration-250;
 }
 
 .side-link {
@@ -17,5 +17,5 @@
 }
 
 .btn {
-    @apply bg-black text-white px-5 py-2 rounded-md hover:bg-[#F3558E] transition duration-250;
+    @apply bg-white text-black px-5 py-2 rounded-md hover:bg-[#161179] hover:text-white transition duration-250;
 }
