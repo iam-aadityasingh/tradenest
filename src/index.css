@@ -1,11 +1,16 @@
 @import "tailwindcss";
 
+.logo-font {
+  font-family: 'Tilt Prism', cursive;
+}
+
+
 .serif {
     @apply font-serif;
 }
 
 .nav-link {
-    @apply text-[1.1rem] text-[#0C0950] hover:text-[#F3F8FF] transition duration-250;
+    @apply text-[1.1rem] text-[#006A67] hover:text-white transition duration-250;
 }
 
 .side-link {
@@ -13,9 +18,9 @@
 }
 
 .side-link-text {
-    @apply h-full w-full p-4 px-6 inline-block hover:translate-x-4 transition duration-250;
+    @apply h-full w-full p-4 px-6 inline-block hover:text-white hover:translate-x-4 transition duration-250;
 }
 
 .btn {
-    @apply bg-white text-black px-5 py-2 rounded-md hover:bg-[#161179] hover:text-white transition duration-250;
+    @apply transition ease-in-out delay-150 duration-250 hover:bg-white hover:text-black px-5 py-2 rounded-md bg-black text-white;
 }
