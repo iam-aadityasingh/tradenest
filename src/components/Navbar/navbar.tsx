@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <div className="sticky top-0 z-50">
       <Suspense fallback={<div><big><i>Loading navbar...</i></big></div>}>
-        <div className="navbar h-14 bg-[#FBE4D6] flex items-center justify-between px-4">
+        <div className="navbar h-14 bg-gradient-to-tr from-pink-500 via-red-500 to-purple-600 flex items-center justify-between px-4">
           <div className="logo">
             <img src={logo_white} alt="logo" className="h-12 w-12" />
           </div>
@@ -53,10 +53,11 @@ export default function Navbar() {
 
         {/* Side Navbar for Mobile */}
         <div
-          className={`sidebar md:hidden transition-[left] duration-500 ease-in-out absolute top-14 w-[250px] bg-[#F8E7F6] z-40
+          className={`sidebar md:hidden transition-[left] duration-500 ease-in-out absolute top-14 w-[250px] bg-gradient-to-tr from-purple-700 via-pink-600 to-red-500 z-40
           ${isToggled ? 'left-0' : '-left-[250px]'}`}
           style={{ height: 'calc(100vh - 56px)' }}
         >
+
           <Link to="/" className="side-link serif"><span className='side-link-text'>Home</span></Link>
           <Link to="/about" className="side-link serif"><span className='side-link-text'>About</span></Link>
           <Link to="/contact" className="side-link serif"><span className='side-link-text'>Contact</span></Link>
