@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import { Suspense } from 'react'
-
-export default function footer() {
-  return (
-    <div>
-        <Suspense fallback={<div>Loading Footer...</div>}>
-            <footer className="bg-[#4B164C] text-white py-4">
-                <div className="container mx-auto text-center">
-                    <p>&copy; {new Date().getFullYear()} TradeNest. All rights reserved.</p>
-                    <p>Follow us on <a href="https://twitter.com/tradenest" className="text-blue-400">Twitter</a></p>
-                </div>
-            </footer>
-        </Suspense>
-    </div>
-  )
-}
-
-=======
 import { Suspense } from 'react';
 import { FaTwitter, FaInstagram, FaFacebookF } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
@@ -38,11 +19,11 @@ export default function Footer() {
 
   return (
     <Suspense fallback={<div><big><i>Loading footer...</i></big></div>}>
-    <footer className="bg-gradient-to-tr from-purple-800 via-pink-600 to-red-500 text-white py-12 px-6 w-full mt-12 animate-fade-in-up">
+    <footer className="bg-[#FFF4B7] text-black py-12 px-6 w-full mt-12 shadow-inner">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
         <div className="md:w-8/12">
           <h2 className="text-2xl font-bold">Barter</h2>
-          <p className="text-base text-gray-200 mt-2">
+          <p className="text-base text-black-200 mt-2">
             Barter is a next-generation community-driven platform where individuals can exchange their skills, services, and assets without traditional currency. Our mission is to make collaboration, resource-sharing, and community support more accessible and economically inclusive.
           </p>
         </div>
@@ -51,36 +32,31 @@ export default function Footer() {
           <div className="mb-4 text-left md:text-right">
             <h3 className="font-semibold text-lg mb-2">Contact Us</h3>
             <p className="text-base">Have ideas or feedback?</p>
-            <p className="text-base">Email: <a href="mailto:hello@barter.com" className="text-blue-200 hover:underline">hello@barter.com</a></p>
+            <p className="text-base">Email: <a href="mailto:hello@barter.com" className="text-[#006A67] hover:underline">hello@barter.com</a></p>
           </div>
 
           <div className="flex gap-4 justify-start md:justify-end mb-2">
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-300 transition text-xl">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-black hover:text-blue-300 transition text-xl">
               <FaTwitter />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-300 transition text-xl">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-black hover:text-pink-300 transition text-xl">
               <FaInstagram />
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-500 transition text-xl">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-black hover:text-blue-500 transition text-xl">
               <FaFacebookF />
             </a>
-          </div>
-
-          <div className="text-sm mt-4 font-semibold space-x-4">
-            <a href="/about" className="hover:underline text-gray-200">About</a>
-            <a href="/contact" className="hover:underline text-gray-200">Contact</a>
           </div>
         </div>
       </div>
 
-      <div className="text-center text-gray-300 hover:text-white duration-150 text-sm mt-6">
+      <div className="text-center text-gray-800 text-sm mt-6">
         © {new Date().getFullYear()} Barter. All rights reserved.
       </div>
 
       {visible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-[#49108B] text-white px-4 py-2 rounded-full shadow-lg hover:bg-gray-100 transition"
+          className="fixed bottom-6 right-6 bg-[#006A67] text-white px-4 py-2 rounded-full shadow-lg hover:bg-black transition"
         >
           ↑ Back to Top
         </button>
@@ -89,4 +65,3 @@ export default function Footer() {
     </Suspense>
   );
 }
->>>>>>> footer

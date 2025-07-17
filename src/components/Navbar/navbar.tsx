@@ -1,9 +1,9 @@
 import '../../index.css';
 import { useState, Suspense, lazy } from 'react';
 import { Link } from 'react-router-dom';
-import navbar_toggler from '../../assets/Navbar/navbar-toggler-dark.svg';
+import navbar_toggler from '../../assets/Navbar/navbar-toggler-light.svg';
 import logo_white from '../../assets/Navbar/logo-white.png';
-import profile from '../../assets/Navbar/profile-dark.svg';
+import profile from '../../assets/Navbar/profile-hover.svg';
 
 const Button = lazy(() => import('../Button/button'));
 
@@ -17,9 +17,10 @@ export default function Navbar() {
   return (
     <div className="sticky top-0 z-50">
       <Suspense fallback={<div><big><i>Loading navbar...</i></big></div>}>
-        <div className="navbar h-14 bg-gradient-to-tr from-pink-500 via-red-500 to-purple-600 flex items-center justify-between px-4">
-          <div className="logo">
+        <div className="navbar h-14 bg-[#000B58] flex items-center justify-between px-4">
+          <div className="logo flex items-center space-x-2">
             <img src={logo_white} alt="logo" className="h-12 w-12" />
+            <h2 className='text-white logo-font text-3xl font-bold'>Barter</h2>
           </div>
           <div className="links hidden md:flex space-x-8">
             <Link to="/" className="nav-link serif">Home</Link>
@@ -53,7 +54,7 @@ export default function Navbar() {
 
         {/* Side Navbar for Mobile */}
         <div
-          className={`sidebar md:hidden transition-[left] duration-500 ease-in-out absolute top-14 w-[250px] bg-gradient-to-tr from-purple-700 via-pink-600 to-red-500 z-40
+          className={`sidebar md:hidden transition-[left] duration-500 ease-in-out absolute top-14 w-[250px] bg-[#003161] z-40
           ${isToggled ? 'left-0' : '-left-[250px]'}`}
           style={{ height: 'calc(100vh - 56px)' }}
         >
