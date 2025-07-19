@@ -10,7 +10,7 @@
 }
 
 .nav-link {
-    @apply text-[1.1rem] text-[#006A67] hover:text-white transition duration-250;
+    @apply text-[1.1rem] text-black hover:text-[#F6F6F6] transition duration-250;
 }
 
 .side-link {
@@ -18,9 +18,22 @@
 }
 
 .side-link-text {
-    @apply h-full w-full p-4 px-6 inline-block hover:text-white hover:translate-x-4 transition duration-250;
+    @apply h-full w-full p-4 px-6 inline-block text-black hover:text-[#F6F6F6] hover:translate-x-4 transition duration-250;
 }
 
+/*FIXME: The border of the button briefly changes to white then to the desired color.*/ 
 .btn {
-    @apply transition ease-in-out delay-150 duration-250 hover:bg-white hover:text-black px-5 py-2 rounded-md bg-black text-white;
+    @apply transition ease-in-out delay-150 duration-250 hover:bg-[#A2D5C6] hover:border-2 hover:border-[#CFFFE2] hover:text-black px-5 py-2 rounded-md bg-black text-white;
+}
+
+.food-card {
+    @apply hover:bg-[#FAEE1C] bg-[#faef1c79];
+}
+
+.creative-card {
+    @apply hover:bg-[#F3558E] bg-[#f3558f75];
+}
+
+.goods-card {
+    @apply hover:bg-[#49108B] bg-[#49108b71];
 }

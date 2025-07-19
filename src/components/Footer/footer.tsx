@@ -19,7 +19,7 @@ export default function Footer() {
 
   return (
     <Suspense fallback={<div><big><i>Loading footer...</i></big></div>}>
-    <footer className="bg-[#FFF4B7] text-black py-12 px-6 w-full mt-12 shadow-inner">
+    <footer className="bg-[#CFFFE2] text-black py-12 px-6 w-full mt-12 shadow-inner">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
         <div className="md:w-8/12">
           <h2 className="text-2xl font-bold">Barter</h2>
@@ -56,7 +56,7 @@ export default function Footer() {
       {visible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-[#006A67] text-white px-4 py-2 rounded-full shadow-lg hover:bg-black transition"
+          className="fixed bottom-6 right-6 bg-[#006A67] text-white px-4 py-2 rounded-full shadow-lg hover:bg-[#F6F6F6] hover:text-black transition duration-550"
         >
           ↑ Back to Top
         </button>

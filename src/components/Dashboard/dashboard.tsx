@@ -1,3 +1,4 @@
+import '../../index.css';
 import { useEffect, useState, Suspense, lazy } from 'react';
 import banner1 from '../../assets/Dashboard/banner1.png';
 import banner2 from '../../assets/Dashboard/banner2.png';
@@ -18,12 +19,21 @@ export default function Dashboard() {
     return () => clearInterval(interval);
   }, []);
 
+  const cardData = [
+    { title: 'Food Card - 0', description: 'Description for Food Card', category: 'food', color: 'food-card' },
+    { title: 'Creative Card - 0', description: 'Description for Creative Card', category: 'fashion', color: 'creative-card'  },
+    { title: 'Goods Card - 0', description: 'Description for Goods Card', category: 'electronics', color: 'goods-card'  },
+    { title: 'Food Card - 1', description: 'Description for Food Card', category: 'food', color: 'food-card' },
+    { title: 'Creative Card - 1', description: 'Description for Creative Card', category: 'fashion', color: 'creative-card'  },
+    { title: 'Goods Card - 1', description: 'Description for Goods Card', category: 'electronics', color: 'goods-card'  },
+  ];
+
   return (
     <div className="dashboard-container">
       <Suspense fallback={<div>Loading Dashboard...</div>}>
         <div className="p-4 w-full max-w-[95vw] min-h-[75vh] mx-auto">
           {/* Image Slider */}
-          <div className="w-full rounded-xl overflow-hidden shadow-2xl mb-16 relative hover:translate-y-5 transition-transform duration-500 ease-in-out">
+          <div className="w-full top-3 rounded-xl overflow-hidden shadow-2xl mb-15 relative hover:translate-y-5 transition-transform duration-500 ease-in-out">
             <img
               src={sliderImages[current]}
               alt={`Slide ${current + 1}`}
@@ -50,8 +60,8 @@ export default function Dashboard() {
               justify-items-center
             "
           >
-            {Array.from({ length: 6 }).map((_, index) => (
-              <Card key={index} />
+            {cardData.map((card, index) => (
+              <Card key={index} title={card.title} description={card.description} category={card.category} color={card.color} />
             ))}
           </div>
         </div>
