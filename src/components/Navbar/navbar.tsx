@@ -15,9 +15,9 @@ export default function Navbar() {
   };
 
   return (
-    <div className="sticky top-0 z-50">
+    <div className="sticky top-3 z-50">
       <Suspense fallback={<div><big><i>Loading navbar...</i></big></div>}>
-        <div className="navbar h-14 bg-[#000B58] flex items-center justify-between px-4">
+        <div className="navbar h-14 bg-[#A2D5C6] flex items-center justify-between px-6 py-2 rounded-full top-3 ml-3 mr-3">
           <div className="logo flex items-center space-x-2">
             <img src={logo_white} alt="logo" className="h-12 w-12" />
             <h2 className='text-white logo-font text-3xl font-bold'>Barter</h2>
@@ -54,11 +54,10 @@ export default function Navbar() {
 
         {/* Side Navbar for Mobile */}
         <div
-          className={`sidebar md:hidden transition-[left] duration-500 ease-in-out absolute top-14 w-[250px] bg-[#003161] z-40
-          ${isToggled ? 'left-0' : '-left-[250px]'}`}
-          style={{ height: 'calc(100vh - 56px)' }}
+          className={`sidebar md:hidden transition-[left] duration-500 ease-in-out absolute top-15 w-[250px] bg-[#A2D5C6] z-40 rounded-4xl
+          ${isToggled ? 'left-3 top-15' : '-left-[250px]'}`}
+          style={{ height: 'calc(100vh - 100px)' }}
         >
-
           <Link to="/" className="side-link serif"><span className='side-link-text'>Home</span></Link>
           <Link to="/about" className="side-link serif"><span className='side-link-text'>About</span></Link>
           <Link to="/contact" className="side-link serif"><span className='side-link-text'>Contact</span></Link>

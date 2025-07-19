@@ -6,7 +6,7 @@ import Footer from './components/Footer/footer';
 export default function App() {
 
   return (
-    <div className="App">
+    <div className="App bg-black">
       <Navbar />
       <Dashboard />
       <Footer />
