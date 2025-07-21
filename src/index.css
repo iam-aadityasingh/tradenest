@@ -9,7 +9,8 @@
 }
 
 .nav-link {
-    @apply text-[1.1rem] text-black hover:text-[#F6F6F6] transition duration-250;
+    @apply text-[1.1rem] text-black hover:text-[#F6F6F6] 
+    transition duration-250;
 }
 
 .side-link {
@@ -17,12 +18,8 @@
 }
 
 .side-link-text {
-    @apply h-full w-full p-4 px-6 inline-block text-black hover:text-[#F6F6F6] hover:translate-x-4 transition duration-250;
-}
-
-/*FIXME: The border of the button briefly changes to white then to the desired color.*/ 
-.btn {
-    @apply transition ease-in-out delay-150 duration-250 hover:bg-[#A2D5C6] hover:border-2 hover:border-[#CFFFE2] hover:text-black px-5 py-2 rounded-md bg-black text-white;
+    @apply h-full w-full p-4 px-6 inline-block text-black 
+    hover:text-[#F6F6F6] hover:translate-x-4 transition duration-250;
 }
 
 .food-card {
@@ -38,5 +35,12 @@
 }
 
 .form-inp {
-    @apply text-white w-[22rem] h-[2.5rem] rounded-3xl border-1 border-gray-500 bg-transparent text-center text-2xl outline-none focus:border-[#F6F6F6] transition duration-250;
+    @apply text-white w-[21rem] h-[2.5rem] rounded-3xl border-1 
+    border-gray-500 bg-transparent p-2 px-4 outline-none 
+    focus:border-[#F6F6F6] focus:border-2 transition duration-250
+    mt-3;
+}
+
+.from-label {
+    @apply text-white text-[1.2rem] font-semibold mb-2 my-7;
 }

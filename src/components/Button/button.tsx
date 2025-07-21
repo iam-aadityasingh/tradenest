@@ -19,9 +19,9 @@ export default function Button({
 
   const base = 'rounded-md font-semibold transition duration-300 ease-in-out';
   const variantMap = {
-    primary: 'bg-black text-white hover:bg-gray-800',
-    secondary: 'bg-white text-black border hover:bg-gray-100',
-    danger: 'bg-red-500 text-white hover:bg-red-600'
+    primary: 'bg-black text-white hover:bg-[#006A67] border-black border-2 hover:border-[#CFFFE2]',
+    secondary: 'bg-white text-black hover:bg-gray-100 border-black border-2 hover:border-[#CFFFE2]',
+    danger: 'bg-red-500 text-white hover:bg-red-600 border-black border-2 hover:border-[#CFFFE2]'
   };
   const sizeMap = {
     sm: 'px-3 py-1 text-sm',
