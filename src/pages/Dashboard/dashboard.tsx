@@ -5,8 +5,8 @@ import banner2 from '../../assets/Dashboard/banner2.png';
 import banner3 from '../../assets/Dashboard/banner3.png';
 import banner4 from '../../assets/Dashboard/banner4.png';
 
-const Searchbar = lazy(() => import('../Searchbar/searchbar'));
-const Card = lazy(() => import('../Card/card'));
+const Searchbar = lazy(() => import('../../components/Searchbar/searchbar'));
+const Card = lazy(() => import('../../components/Card/card'));
 const sliderImages = [banner1, banner2, banner3, banner4];
 
 export default function Dashboard() {
