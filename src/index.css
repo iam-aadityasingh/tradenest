@@ -4,7 +4,6 @@
   font-family: 'Tilt Prism', cursive;
 }
 
-
 .serif {
     @apply font-serif;
 }
@@ -36,4 +35,8 @@
 
 .goods-card {
     @apply hover:bg-[#49108B] bg-[#49108b71];
+}
+
+.form-inp {
+    @apply text-white w-[22rem] h-[2.5rem] rounded-3xl border-1 border-gray-500 bg-transparent text-center text-2xl outline-none focus:border-[#F6F6F6] transition duration-250;
 }

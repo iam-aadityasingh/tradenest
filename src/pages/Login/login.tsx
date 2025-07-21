@@ -1,23 +1,21 @@
 import '../../index.css';
-import { Suspense } from "react";
+import { Suspense, lazy } from "react";
+const Button = lazy(() => import('../../components/Button/button'));
 
 export default function login() {
   return (
     <div>
       <Suspense fallback={<div>Loading Login Form...</div>}>
-        <div className="login-container bg-gray-800 text-white p-8 rounded-lg shadow-lg h-[28rem] w-[40rem]">
-          <div className="from-input">
-            <form>
-              <label htmlFor="email">Enter Email:</label>
-              <input type="text" name="email" id="email" placeholder='Email' className='form-inp'/>
+        <div className="login-container w-[25rem] h-[30rem] bg-[#161616] text-white p-8">
+          <form>
+            <label htmlFor="email">Enter Email:</label>
+            <input type="text" name="email" id="email" placeholder='Email' className='form-inp' autoComplete='email'/>
 
-              <label htmlFor="password">Enter password:</label>
-              <input type="text" name="password" id="password" placeholder='Password' className='form-inp'/>
+            <label htmlFor="password">Enter password:</label>
+            <input type="password" name="password" id="password" placeholder='Password' className='form-inp' autoComplete='password'/>
 
-              <button type="submit">Login</button>
-            </form>
-          </div>
-          <div className="form-background"></div>
+            <Button text='Login' />
+          </form>
         </div>
       </Suspense>
     </div>
