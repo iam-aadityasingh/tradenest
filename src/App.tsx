@@ -10,7 +10,7 @@ import Signup from './pages/SignUp/signup';
 
 export default function App() {
   return (
-    <div className="App bg-black min-h-screen">
+    <div className="App">
       <Routes>
         {/* Auth Pages */}
         <Route

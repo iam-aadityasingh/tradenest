@@ -10,7 +10,7 @@
 
 .nav-link {
     @apply text-[1.1rem] text-black hover:text-[#F6F6F6] 
-    transition duration-250;
+           transition duration-250;
 }
 
 .side-link {
@@ -35,12 +35,11 @@
 }
 
 .form-inp {
-    @apply text-white w-[21rem] h-[2.5rem] rounded-3xl border-1 
-    border-gray-500 bg-transparent p-2 px-4 outline-none 
-    focus:border-[#F6F6F6] focus:border-2 transition duration-250
-    mt-3;
+  @apply text-white w-full h-10 rounded-3xl border border-gray-500 
+           bg-transparent p-2 px-4 outline-none focus:border-[#ADEED9] 
+           focus:border-2 transition duration-250 focus:bg-[#006A67];
 }
 
-.from-label {
-    @apply text-white text-[1.2rem] font-semibold mb-2 my-7;
+.form-label {
+  @apply text-white text-lg font-semibold;
 }
