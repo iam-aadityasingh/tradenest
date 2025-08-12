@@ -1,8 +1,8 @@
 import './index.css';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar/navbar';
+import AuthLayout from './layouts/AuthLayout';
 import Dashboard from './pages/Dashboard/dashboard';
-import Footer from './components/Footer/footer';
+import MainLayout from './layouts/MainLayout';
 import About from './pages/About/about';
 import Contact from './pages/Contact/contact';
 import Login from './pages/Login/login';
@@ -10,18 +10,52 @@ import Signup from './pages/SignUp/signup';
 
 export default function App() {
   return (
-    <div className="App bg-black min-h-screen">
-      <Navbar />
-
+    <div className="App">
       <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-      </Routes>
+        {/* Auth Pages */}
+        <Route
+          path="/login"
+          element={
+            <AuthLayout>
+              <Login />
+            </AuthLayout>
+          }
+        />
+        <Route
+          path="/signup"
+          element={
+            <AuthLayout>
+              <Signup />
+            </AuthLayout>
+          }
+        />
 
-      <Footer />
+        {/* Main Pages */}
+        <Route
+          path="/dashboard"
+          element={
+            <MainLayout>
+              <Dashboard />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <MainLayout>
+              <About />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <MainLayout>
+              <Contact />
+            </MainLayout>
+          }
+        />
+      </Routes>
     </div>
   );
 }
